@@ -76,7 +76,7 @@ setInterval(async () => {
   if (issueCount > 5 || (latestBlockHeight - poolBlockHeight > 5)) {
     playMusic()
   }
-}, 10000)
+}, 60000)
 
 playMusic = async () => {
   const Audio = createAudio()

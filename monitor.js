@@ -24,8 +24,9 @@ const fetchGrinPoolData = async (blockHeight) => {
       if (block.height > poolBlockHeight) {
         poolBlockHeight = block.height
       }
-      if (block.sharesProcessed === 0) {
+      if (block.shares_processed === 0) {
         zeroShares++
+        console.log('a zero share block!')
       }
     })
     console.log('zero share blocks of last 6: ', zeroShares)
@@ -71,9 +72,9 @@ const mainRoutine = async () => {
 }
 
 setInterval(async () => {
-  console.log('inside setInterval, issueCount is: ', issueCount)
   await mainRoutine()
-  if (issueCount > 5 || (latestBlockHeight - poolBlockHeight > 5)) {
+  console.log('inside setInterval, issueCount is: ', issueCount)  
+  if (issueCount > 8 || (latestBlockHeight - poolBlockHeight > 8)) {
     playMusic()
   }
 }, 60000)

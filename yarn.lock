@@ -1009,6 +1009,11 @@ sumchecker@^1.2.0:
     debug "^2.2.0"
     es6-promise "^4.0.5"
 
+tcp@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/tcp/-/tcp-1.0.0.tgz#fc76665a5b4c14ca3913257043c07076fa86aa7e"
+  integrity sha1-/HZmWltMFMo5EyVwQ8BwdvqGqn4=
+
 throttleit@0.0.2:
   version "0.0.2"
   resolved "https://registry.yarnpkg.com/throttleit/-/throttleit-0.0.2.tgz#cfedf88e60c00dd9697b61fdd2a8343a9b680eaf"

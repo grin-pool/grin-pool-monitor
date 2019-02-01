@@ -71,10 +71,10 @@ const mainRoutine = async () => {
   }
 }
 
-setInterval(async () => {
+const mainInterval = setInterval(async () => {
   await mainRoutine()
   console.log('inside setInterval, issueCount is: ', issueCount)  
-  if (issueCount > 8 || (latestBlockHeight - poolBlockHeight > 8)) {
+  if (issueCount > 8 || (latestBlockHeight - poolBlockHeight > 12)) {
     playMusic()
   }
 }, 60000)
@@ -83,4 +83,5 @@ playMusic = async () => {
   const Audio = createAudio()
   const myFile = await Audio(`./music.mp3`)
   await myFile.play()
+  clearInterval(mainInterval)
 }

@@ -6,10 +6,12 @@
   "dependencies": {
     "beepbeep": "^1.2.2",
     "node-fetch": "^2.3.0",
-    "node-mp3-player": "^1.0.3"
+    "node-mp3-player": "^1.0.3",
+    "tcp": "^1.0.0"
   },
   "scripts": {
-    "start": "node monitor.js"
+    "start": "node monitor.js",
+    "spam": "node spam.js"
   },
   "devDependencies": {}
 }
